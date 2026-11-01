@@ -22,7 +22,7 @@ const startServer = async () => {
       console.warn('[Seed Warning]', seedErr.message);
     }
 
-    httpServer.listen(config.port, () => {
+    httpServer.listen(config.port, '0.0.0.0', () => {
       console.log(`[ScrapClock Backend] Server running on port ${config.port} (${config.env})`);
       console.log(`[ScrapClock Backend] Health check: http://localhost:${config.port}/api/health`);
     });
@@ -35,4 +35,3 @@ const startServer = async () => {
 startServer();
 
 export { httpServer, app };
-

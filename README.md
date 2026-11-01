@@ -108,3 +108,5 @@ Open in browser: `http://localhost:5173`
   - `alerts` on `(runId, tier, status)`
 - [x] Assumptions and SOP Actions seed scripts executed cleanly.
 - [x] Frontend 6-page router + Dark/Light theme toggle operational with 48px touch targets.
+
+# Loreal_Part
