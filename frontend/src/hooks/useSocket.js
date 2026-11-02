@@ -8,8 +8,9 @@ export const useSocket = () => {
   const socketRef = useRef(null);
 
   useEffect(() => {
-    // Connect to backend via proxy or current host
-    const socket = io({
+    // Connect to backend via environment URL, proxy, or current host
+    const socketServerUrl = import.meta.env.VITE_API_URL || undefined;
+    const socket = io(socketServerUrl, {
       path: '/socket.io',
       transports: ['websocket', 'polling'],
       reconnectionAttempts: 10,
@@ -54,3 +55,4 @@ export const useSocket = () => {
     emitEvent,
   };
 };
+

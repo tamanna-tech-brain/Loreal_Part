@@ -23,7 +23,7 @@ export class KpiService {
     return await Kpi.findOneAndUpdate(
       { runId: data.runId },
       { $set: data },
-      { upsert: true, new: true }
+      { upsert: true, returnDocument: 'after' }
     );
   }
 }

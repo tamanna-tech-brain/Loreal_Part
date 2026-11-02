@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sliders, Play, Pause, RotateCcw, AlertTriangle, ShieldCheck } from 'lucide-react';
+import { Sliders, Play, Pause, RotateCcw, ShieldCheck } from 'lucide-react';
 
 export const ScenarioControlPage = () => {
   const [scenario, setScenario] = useState('moisture_rise');
@@ -80,8 +80,8 @@ export const ScenarioControlPage = () => {
             </div>
           </div>
 
-          {/* Seed and Onset */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Seed, Onset, and Severity */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
               <label className="text-xs font-bold uppercase text-slate-500 tracking-wider block mb-1">
                 Random Seed (Reproducibility)
@@ -101,6 +101,20 @@ export const ScenarioControlPage = () => {
                 type="number"
                 value={onsetCycle}
                 onChange={(e) => setOnsetCycle(parseInt(e.target.value) || 30)}
+                className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 font-mono text-sm"
+              />
+            </div>
+            <div>
+              <label className="text-xs font-bold uppercase text-slate-500 tracking-wider block mb-1">
+                Drift Severity (Multiplier)
+              </label>
+              <input
+                type="number"
+                step="0.1"
+                min="0.1"
+                max="5.0"
+                value={severity}
+                onChange={(e) => setSeverity(parseFloat(e.target.value) || 1.0)}
                 className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 font-mono text-sm"
               />
             </div>
@@ -142,3 +156,4 @@ export const ScenarioControlPage = () => {
     </div>
   );
 };
+

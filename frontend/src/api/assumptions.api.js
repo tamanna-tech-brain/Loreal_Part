@@ -7,3 +7,4 @@ export const getAssumptions = async () => {
 export const updateAssumption = async (data) => {
   return apiClient.put('/assumptions', data);
 };
+

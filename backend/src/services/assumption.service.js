@@ -9,7 +9,7 @@ export class AssumptionService {
     return await Assumption.findOneAndUpdate(
       { key },
       { $set: updateData },
-      { new: true, runValidators: true }
+      { returnDocument: 'after', runValidators: true }
     );
   }
 

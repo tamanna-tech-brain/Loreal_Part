@@ -1,5 +1,5 @@
 import React from 'react';
-import { GitCompare, Award, AlertCircle } from 'lucide-react';
+import { GitCompare, Award } from 'lucide-react';
 
 export const ModeComparisonPage = () => {
   return (
@@ -121,3 +121,4 @@ export const ModeComparisonPage = () => {
     </div>
   );
 };
+

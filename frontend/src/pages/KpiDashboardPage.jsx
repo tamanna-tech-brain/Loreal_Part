@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart3, TrendingUp, AlertOctagon, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
 
 export const KpiDashboardPage = () => {
   return (
@@ -57,3 +57,4 @@ export const KpiDashboardPage = () => {
     </div>
   );
 };
+

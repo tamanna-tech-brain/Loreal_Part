@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, Clock, Layers, Check, X, HelpCircle } from 'lucide-react';
+import { AlertTriangle, Clock, Check, X, HelpCircle } from 'lucide-react';
 
 export const AlertDetailPage = () => {
   return (
@@ -95,3 +95,4 @@ export const AlertDetailPage = () => {
     </div>
   );
 };
+

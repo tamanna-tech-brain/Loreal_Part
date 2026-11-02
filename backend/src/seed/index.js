@@ -11,7 +11,7 @@ export const seedDatabase = async () => {
     await Assumption.findOneAndUpdate(
       { key: item.key },
       { $set: item },
-      { upsert: true, new: true }
+      { upsert: true, returnDocument: 'after' }
     );
   }
 
@@ -19,7 +19,7 @@ export const seedDatabase = async () => {
     await SopAction.findOneAndUpdate(
       { featurePattern: item.featurePattern },
       { $set: item },
-      { upsert: true, new: true }
+      { upsert: true, returnDocument: 'after' }
     );
   }
 

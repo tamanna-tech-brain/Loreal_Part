@@ -1,9 +1,9 @@
 import React from 'react';
 import { useOutletContext } from 'react-router-dom';
-import { CheckCircle2, AlertTriangle, ShieldCheck, Zap, Droplets, Package } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export const LiveLinePage = () => {
-  const { isConnected, latestCycle, latestAlert } = useOutletContext();
+  const { isConnected: _isConnected, latestCycle: _latestCycle, latestAlert: _latestAlert } = useOutletContext() || {};
 
   return (
     <div className="space-y-6">
@@ -99,3 +99,4 @@ export const LiveLinePage = () => {
     </div>
   );
 };
+

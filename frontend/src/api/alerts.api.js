@@ -7,3 +7,4 @@ export const getAlerts = async () => {
 export const patchAlert = async (id, data) => {
   return apiClient.patch(`/alerts/${id}`, data);
 };
+
